@@ -1,9 +1,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &default_layout;
     };
 
     default_transform: keymap_transform0 {
@@ -21,6 +21,53 @@
                             RC(3,2) RC(3,3) RC(3,4)     RC(3,5) RC(3,6) RC(3,7)
         >;
     };
+
+
+    default_layout: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Ghost Monument";
+
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0  151 (-1000)    53   201>
+            , <&key_physical_attrs 100 100  119   60  (-400)   172   110>
+            , <&key_physical_attrs 100 100  240    0       0     0     0>
+            , <&key_physical_attrs 100 100  346   49       0     0     0>
+            , <&key_physical_attrs 100 100  452   65       0     0     0>
+            , <&key_physical_attrs 100 100  791   65       0     0     0>
+            , <&key_physical_attrs 100 100  897   49       0     0     0>
+            , <&key_physical_attrs 100 100 1003    0       0     0     0>
+            , <&key_physical_attrs 100 100 1123   60     400  1176   110>
+            , <&key_physical_attrs 100 100 1242  152    1000  1295   202>
+            , <&key_physical_attrs 100 100   18  250 (-1000)    70   300>
+            , <&key_physical_attrs 100 100  126  160  (-400)   179   210>
+            , <&key_physical_attrs 100 100  240  100       0     0     0>
+            , <&key_physical_attrs 100 100  346  149       0     0     0>
+            , <&key_physical_attrs 100 100  452  165       0     0     0>
+            , <&key_physical_attrs 100 100  791  166       0     0     0>
+            , <&key_physical_attrs 100 100  897  149       0     0     0>
+            , <&key_physical_attrs 100 100 1003  100       0     0     0>
+            , <&key_physical_attrs 100 100 1116  160     400  1169   210>
+            , <&key_physical_attrs 100 100 1225  250    1000  1278   300>
+            , <&key_physical_attrs 100 100   35  348 (-1000)    88   398>
+            , <&key_physical_attrs 100 100  133  260  (-400)   186   310>
+            , <&key_physical_attrs 100 100  240  200       0     0     0>
+            , <&key_physical_attrs 100 100  346  249       0     0     0>
+            , <&key_physical_attrs 100 100  452  265       0     0     0>
+            , <&key_physical_attrs 100 100  791  266       0     0     0>
+            , <&key_physical_attrs 100 100  897  249       0     0     0>
+            , <&key_physical_attrs 100 100 1003  200       0     0     0>
+            , <&key_physical_attrs 100 100 1109  260     400  1162   310>
+            , <&key_physical_attrs 100 100 1208  349    1000  1261   399>
+            , <&key_physical_attrs 100 100  316  371       0     0     0>
+            , <&key_physical_attrs 100 100  434  387    1500   486   437>
+            , <&key_physical_attrs 100 100  542  432    3000   595   482>
+            , <&key_physical_attrs 100 100  701  432 (-3000)   754   482>
+            , <&key_physical_attrs 100 100  809  387 (-1500)   862   437>
+            , <&key_physical_attrs 100 100  926  371       0     0     0>
+            ;};
 
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
