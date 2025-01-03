@@ -1,0 +1,11 @@
+file_format: "1"
+id: ghost_factory
+name: Ghost Factory
+type: shield
+url: https://github.com/TBVanderley4545/zmk-ghost-factory
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - ghost_factory_left
+  - ghost_factory_right
